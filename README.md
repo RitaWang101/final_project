@@ -63,13 +63,20 @@ The analysis focuses on cross-platform consistency, review behavior patterns, an
 
 1. **Clone the repo**  
    ```bash
-   git clone <repo-url>
-   cd <repo-directory>
+   cd ~/Desktop
+   git clone <repo-url> # the github url
+   cd ~/Desktop/final_project 
 2. **Install Library**
    ```bash
+   pip install --upgrade pip
    pip install -r requirements.txt
-3. **Configure API keys (create a .env file)**
+3. **Configure API keys (create a .env file in src folder,cpy these to .env in scr folder)**
    ```bash
-   CLIENT_ID=your_client_id
-   CLIENT_SECRET=your_client_secret
-   USER_AGENT=your_user_agent
+   REDDIT_CLIENT_ID=your_reddit_client_id_here
+   REDDIT_CLIENT_SECRET=your_reddit_client_secret_here
+   REDDIT_USER_AGENT=your_reddit_user_agent_here
+   KAGGLE_USERNAME=your_kaggle_username_here
+   KAGGLE_KEY=your_kaggle_key_here
+4. **run result.ipynb**
+   ```bash
+   jupyter notebook result.ipynb 
