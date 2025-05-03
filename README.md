@@ -27,7 +27,7 @@ The analysis focuses on cross-platform consistency, review behavior patterns, an
 
 3. **Reddit Discussions**  
    - **Subreddits:** `r/iPhoneXR` and `r/iPhone13`  
-   - **Description:** 600 comments combined  
+   - **Description:** 1170 comments combined  
    - **Fields:** `thread_title`, `comment_id`, `content`, `subreddit`, `author`
 
 ## Analysis Steps
@@ -43,7 +43,7 @@ The analysis focuses on cross-platform consistency, review behavior patterns, an
    - Visualize top 10 features by average sentiment  
 
 3. **Time-Based Sentiment Analysis**  
-   - Convert `created_time` to daily and monthly bins  
+   - Convert `created_time` to monthly bins  
    - Compute daily post counts and daily average sentiment  
    - Compute monthly average sentiment  
    - Plot daily posts vs. sentiment and monthly sentiment trends  
@@ -51,14 +51,43 @@ The analysis focuses on cross-platform consistency, review behavior patterns, an
 4. **Keyword Frequency Comparison**  
    - Count keyword occurrences per subreddit  
    - Identify common vs. unique keywords  
-   - Visualize top 10 unique and common keywords for each model  
+   - Visualize top 10 unique and common keywords for each model
+5. **Cross Platform Analysis**
+   - create a new table called combined only including sentiment score and platform as well as iphone version
+   - group by platform and iphone version to calculate the mean score of sentiment 
 
-## Summary of Results
+## Results Summary
 
-- **Top Features by Sentiment:** _[Your brief findings here]_  
-- **Sentiment Over Time:** _[Key trend insights here]_  
-- **Keyword Differences:** _[Highlights of shared vs. unique terms]_  
+### 1. Reddit Keyword Frequency  
+- **Battery** and **iOS** dominate both communities:  
+- **Camera** is more prevalent in r/iPhone13 (~65 vs. ~51), while **screen** ranks third in both (13 ≈ 87; XR ≈ 113).  
+- XR users show higher relative concern most of the features than 13 users.
 
+### 2. Cross-Version Sentiment (Reddit)  
+- **iPhone XR** top-sentiment features:  
+  - **camera** and **battery**  
+- **iPhone 13** top-sentiment features:  
+  - **5G**and **system (iOS stability)**
+- Emerging positive mentions: **Face ID** (avg 0.123) and **iMessage** (avg 0.09)
+- Users feel negative on camera gradually and batetty, but **screen** always can not meet users'satisfaction 
+
+### 3. Activity & Sentiment Over Time  
+- r/iPhone13 surged to 100 posts in January 2025, then stabilized around 38/month.  
+- XR sentiment remains positive (+0.05 to +0.20); 13 began negative (–0.10 at launch), crossed neutral in December 2024, and settled around +0.10 by Q1 2025.
+
+### 4. Amazon Rating Comparison  
+- **iPhone XR** leads on **performance** and **software stability**.  
+- **iPhone 13** leads on **storage capacity** and **audio**.  
+- Both models score lowest on **screen** and **charging**, which is consistent with the sentiment reflection in Reddit 
+- iPhone 13 reviewers have new concern about **Privacy** 
+
+### 5. Cross-Platform Sentiment  
+- Amazon reviews average ~0.38 sentiment versus Reddit’s ~0.08.  
+- By model:  
+   1. people are willing to show positive sentiment on the **e-commerce website** and talk about real concern on **forum**
+   2. Especially in the **XR** using experience, the sentiment score show a large gap between the two platform 
+   
+  
 ## How to Run
 
 1. **Clone the repo**  
